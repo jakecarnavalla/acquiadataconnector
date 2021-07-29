@@ -53,10 +53,28 @@
       }
     ]
   },
+  "transforms": [
+    {
+      "function": {
+        "inputHeaders": {
+          "headers": [
+            "Landing Page URL"
+          ]
+        },
+        "plugin": "acquia_transforms",
+        "function": "constructUrl"
+      }
+    }
+  ],
   "mappings": [
     {
       "field": "yext/entityId",
       "header": "ID",
+      "subfieldPath": []
+    },
+    {
+      "field": "yext/body",
+      "header": "Body",
       "subfieldPath": []
     },
     {
@@ -65,17 +83,18 @@
       "subfieldPath": []
     },
     {
-      "field": "yext/body",
-      "header": "Body",
+      "field": "yext/landingPageUrl",
+      "header": "Landing Page URL",
       "subfieldPath": []
     }
   ],
   "scheduleConfig": {
-     "customSchedule": {
-          "timeZone": "America/New_York",
-          "startDate": "2021-06-23",
-          "startTime": "03:00",
-          "frequencyType": "DAILY"
-     }
+    "customSchedule": {
+      "timeZone": "America/New_York",
+      "startDate": "2021-06-23",
+      "startTime": "03:00",
+      "frequencyType": "DAILY"
+    },
+    "runMode": "DEFAULT"
   }
 }
