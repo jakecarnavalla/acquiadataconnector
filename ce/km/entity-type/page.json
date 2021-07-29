@@ -6,11 +6,11 @@
   "enabled": true,
   "field": [
     {
-      "id": "yext/landingPageUrl",
+      "id": "yext/body",
       "required": false
     },
     {
-      "id": "yext/description",
+      "id": "yext/landingPageUrl",
       "required": false
     },
     {
