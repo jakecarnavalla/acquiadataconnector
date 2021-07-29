@@ -1,3 +1,5 @@
-export function convertDate(s: string) {
-    return s.substr(0, s.length - 5)
+declare var domain: string;
+
+export function constructUrl(s: string) {
+    return domain + s;
 }
