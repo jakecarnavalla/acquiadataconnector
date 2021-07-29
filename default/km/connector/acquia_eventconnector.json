@@ -78,7 +78,53 @@
       }
     ]
   },
+  "transforms": [
+    {
+      "findAndReplace": {
+        "inputHeaders": {
+          "headers": [
+            "Description"
+          ]
+        },
+        "valueToFind": {
+          "regex": "\u003c[^\u003e]*\u003e"
+        },
+        "replacement": ""
+      }
+    },
+    {
+      "function": {
+        "inputHeaders": {
+          "headers": [
+            "Landing Page URL"
+          ]
+        },
+        "plugin": "acquia_transforms",
+        "function": "constructUrl"
+      }
+    },
+    {
+      "findAndReplace": {
+        "inputHeaders": {
+          "headers": [
+            "Door Time",
+            "Event Start",
+            "Event End"
+          ]
+        },
+        "valueToFind": {
+          "regex": "-[0-9]{1,2}:[0-9]{2}"
+        },
+        "replacement": ""
+      }
+    }
+  ],
   "mappings": [
+    {
+      "field": "yext/landingPageUrl",
+      "header": "Landing Page URL",
+      "subfieldPath": []
+    },
     {
       "field": "yext/description",
       "header": "Description",
@@ -115,11 +161,6 @@
     {
       "field": "yext/linkedLocation",
       "header": "Location",
-      "subfieldPath": []
-    },
-    {
-      "field": "yext/landingPageUrl",
-      "header": "Landing Page URL",
       "subfieldPath": []
     }
   ],
