@@ -53,7 +53,25 @@
       }
     ]
   },
+  "transforms": [
+    {
+      "function": {
+        "inputHeaders": {
+          "headers": [
+            "Landing Page URL"
+          ]
+        },
+        "plugin": "acquia_transforms",
+        "function": "constructUrl"
+      }
+    }
+  ],
   "mappings": [
+    {
+      "field": "yext/landingPageUrl",
+      "header": "Landing Page URL",
+      "subfieldPath": []
+    },
     {
       "field": "yext/entityId",
       "header": "ID",
@@ -65,8 +83,8 @@
       "subfieldPath": []
     },
     {
-      "field": "yext/landingPageUrl",
-      "header": "Landing Page URL",
+      "field": "yext/body",
+      "header": "Body",
       "subfieldPath": []
     }
   ],
