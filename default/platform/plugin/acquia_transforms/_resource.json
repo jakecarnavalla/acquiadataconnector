@@ -1,4 +1,7 @@
 {
   "$id": "acquia_transforms",
-  "$schema": "https://schema.yext.com/config/platform/plugin/v1"
+  "$schema": "https://schema.yext.com/config/platform/plugin/v1",
+  "globals": {
+    "domain": "${{acquiaDomain}}"
+  }
 }
